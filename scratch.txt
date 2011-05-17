@@ -1,0 +1,5 @@
+DOESNT WORK
+<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
+
+DOES WORK
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
