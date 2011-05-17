@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<title>Mobile To-Do</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
-	<script src="scripts/json2.js"></script>
+  <head>
+    <title>Mobile To-Do</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+    <script src="scripts/json2.js"></script>
     <script src="scripts/jquery.cookie.js"></script>
     <script src="scripts/jquery.tmpl.js"></script>
     <script src="scripts/to-do.js"></script>        
-</head>
-<body>
-<div id="mainPage" data-role="page">
-	<div data-role="header">
-		<h1>Mobile To-Do List</h1>
-        <a href="#addPage" data-role="button" data-icon="plus">New</a>
-	</div>
-	<div data-role="content">
-        <ul id="todoList" data-role="listview">
-            <li data-priority="2" data-role="list-divider">Important</li>
-            <li data-priority="1" data-role="list-divider">Normal</li>
-            <li data-priority="0" data-role="list-divider">Low</li>
-        </ul>		
-	</div>
-</div>
-<div id="addPage" data-role="page">
-    <div data-role="header">
-        <a href="#mainPage" data-role="button" data-icon="back">Back</a>
-        <h1>New To-Do</h1>
-        <a href="#mainPage" id="createButton" data-role="button" data-icon="plus">Create</a>
+  </head>
+  <body>
+    <div id="mainPage" data-role="page">
+
+      <div data-role="header">
+	<h1>Randaffirm</h1>
+      </div>
+
+      <div data-role="content">
+	<ul data-role="listview" data-dividertheme="e">
+          <li data-role="list-divider">	<h4>Timing Betweeen Affirmations</h4>
+</li>
+          <li>
+	    
+	    <form>
+	      <table>
+		<tr>
+		  <td>Between&nbsp;</td>
+		  <td style="width:5em">
+		    <input type="number" name="minmin" id="minmin" value="15" / >
+		  </td>
+		  <td>and&nbsp;&nbsp;</td>
+		  <td style="width:5em">
+		    <input type="number" name="maxmin" id="maxmin" value="45" / >
+		  </td>
+		  <td>minutes&nbsp;</td>
+		  <td>
+		    <input type="submit" value="Go">
+		  </td>
+		</tr>
+	      </table>
+	    </form>
+	  </li>
+	</ul>
+
+      </div>
+
+      <div data-role="footer">
+	All that you are experiencing is the result of your causative
+	thinking -- Andreas Buttler, "Spiritologie"
+      </div>
+
     </div>
-    <div data-role="content">
-        <div data-role="fieldcontain">
-            <label for="todoDescription">Description:</label>
-            <input type="text" name="todoDescription" id="todoDescription" value=""  />
-        </div>
-        <div data-role="fieldcontain">
-            <label for="todoUrgency" class="select">Urgency:</label>
-            <select name="todoUrgency" id="todoUrgency" data-native-menu="false">
-                <option value="2">Important</option>
-                <option value="1" selected="selected">Normal</option>
-                <option value="0">Low</option>
-            </select>
-        </div>        
-    </div>
-</div>
-</body>
+
+  </body>
 </html>
